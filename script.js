@@ -6,6 +6,29 @@ window.onload = ()=>{
     img1.classList.add('img1move');
     img2.classList.add('img2move');
 }
+//================================================================================
+
+    let title = document.querySelector('.title');
+    let About_text = document.querySelector('.About_text');
+    let img4 = document.querySelector('.img4');
+    window.onscroll = () => {
+        if (window.scrollY >= 210) {
+            title.style.opacity = 1;
+        } else {
+            title.style.opacity = 0;
+        }
+        if (window.scrollY >= 230) {
+            About_text.style.left = "0%";
+        } else {
+            About_text.style.left = "100%";
+        }
+        if (window.scrollY >= 215) {
+            img4.style.opacity = 1;
+        } else {
+            img4.style.opacity = 0;
+        }
+    };
+
 
 
 //==============================Language

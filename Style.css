@@ -236,19 +236,27 @@ nav button:hover{
   width: 100%;
   padding: 0 40px;
   padding-top: 25px;
+  opacity: 0;
+  transition: 0.3s;
 }
+
 .about_content{
   width: 100%;
   display: flex;
 }
 .img4{
+  position: absolute;
   width: 40%;
   margin-left: 20px;
   z-index: 100;
+  opacity: 0;
+  transition: 0.3s;
 }
 .About_text{
   position: relative;
   width: 50%;
+  left: 100%;
+  transition: 0.3s;
 }
 .About_text p{
   position: relative;
@@ -256,8 +264,8 @@ nav button:hover{
   color: var(--SecondColor);
   width: 80%;
   padding: 20px;
-  margin-left: 20px;
-  margin-top: 10px ;
+  left: 90%;
+  margin-bottom: 10px ;
 }
 /*=============================================================*/
 .Service{
@@ -554,6 +562,12 @@ footer ul a:hover{
     width: 100%;
     margin-left: 15px;
   }
+  .About{
+    overflow: hidden;
+  }
+  .About_text p{
+    left: 8%;
+  }
 }
 
 @media (max-width: 50.4375em) {
@@ -664,9 +678,15 @@ footer ul a:hover{
   .img4{
     display: none;
   }
+  .About{
+    overflow: hidden;
+  }
   .About_text{
     width: 100%;
     margin-left: 15px;
+  }
+  .About_text p{
+    left: 8%;
   }
   .Service{
     height: 80vh;
