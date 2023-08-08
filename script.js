@@ -11,13 +11,15 @@ window.onload = ()=>{
     let title = document.querySelector('.title');
     let About_text = document.querySelector('.About_text');
     let img4 = document.querySelector('.img4');
+    let title1 = document.querySelector('.title1');
     window.onscroll = () => {
+        console.log(window.scrollY)
         if (window.scrollY >= 210) {
             title.style.opacity = 1;
         } else {
             title.style.opacity = 0;
         }
-        if (window.scrollY >= 230) {
+        if (window.scrollY >= 220) {
             About_text.style.left = "0%";
         } else {
             About_text.style.left = "100%";
@@ -26,6 +28,11 @@ window.onload = ()=>{
             img4.style.opacity = 1;
         } else {
             img4.style.opacity = 0;
+        }
+        if (window.scrollY >= 570) {
+            title1.style.top = "0%";
+        } else {
+            title1.style.top = "-20%";
         }
     };
 
