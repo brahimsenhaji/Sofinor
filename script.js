@@ -12,6 +12,7 @@ window.onload = ()=>{
     let About_text = document.querySelector('.About_text');
     let img4 = document.querySelector('.img4');
     let title1 = document.querySelector('.title1');
+    let card = document.querySelectorAll('#card');
     window.onscroll = () => {
         console.log(window.scrollY)
         if (window.scrollY >= 210) {
@@ -34,6 +35,13 @@ window.onload = ()=>{
         } else {
             title1.style.top = "-20%";
         }
+       card.forEach(card =>{
+        if (window.scrollY >= 760) {
+            card.style.left = "0%";
+        } else {
+            card.style.left = "100%";
+        }
+       })
     };
 
 
