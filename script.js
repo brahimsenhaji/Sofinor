@@ -1,7 +1,10 @@
 let text = document.querySelector('.text');
-
+let img1 = document.querySelector('.img1');
+let img2 = document.querySelector('.img2');
 window.onload = ()=>{
     text.classList.add('textmove');
+    img1.classList.add('img1move');
+    img2.classList.add('img2move');
 }
 
 

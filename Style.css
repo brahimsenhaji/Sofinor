@@ -146,11 +146,11 @@ nav button:hover{
   width: 50%;
   height: 100%;
   padding: 10px;
-  opacity: 0;
-  transition: 0.5s;
+  transition: 0.3s;
+  left: -100%;
 }
 .textmove{
-  opacity: 1;
+  left: 0;
 }
 .text h1{
   position: absolute;
@@ -189,14 +189,22 @@ nav button:hover{
   position: absolute;
   width: 60%;
   filter: drop-shadow(1px 20px 20px rgba(0, 0, 0, 0.349));
-
+  top: -100%;
+  transition: 0.5s;
+}
+.img1move{
+  top: 0;
 }
 .img2{
   position: absolute;
   width: 40%;
-  left: 40%;
+  left: 100%;
   top: 20%;
   filter: drop-shadow(1px 10px 10px rgba(0, 0, 0, 0.349));
+  transition: 1s;
+}
+.img2move{
+   left: 40%;
 }
 .last{
   display: flex;
