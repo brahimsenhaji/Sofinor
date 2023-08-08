@@ -50,7 +50,7 @@ window.onload = ()=>{
 let Language = document.querySelector('.Language');
 let txt = document.querySelectorAll('#txt');
 
-let text_in_english = ['Home', 'About', 'Services','Contact us', 'Industrial Maintenance and Supplies'];
+let text_in_english = ['Home', 'About', 'Services','Contact us', 'Industrial Maintenance and Supplies','About',' ',' ','Services','Industrial Maintenance and Supplies','Industrial machinery repair and commissioning','Automatism, Pneumatics, Hydraulics','Installation and realization of electrical boxes','Contact us','SEND A MESSAGE','Home','About','Services'];
 
 // Store the original text content in an array
 let originalTextContent = Array.from(txt).map(t => t.textContent);
