@@ -57,13 +57,13 @@ let originalTextContent = Array.from(txt).map(t => t.textContent);
 
 Language.addEventListener('click', () => {
     let value = Language.getAttribute('value');
-    if (value == 'FR') {
+    if (value == 'EN') {
         Language.setAttribute('value', 'EN');
         txt.forEach(t => {
             let vv = t.getAttribute('data-value');
             t.textContent = text_in_english[vv];
         });
-    } else if (value == 'EN') {
+    } else if (value == 'FR') {
         Language.setAttribute('value', 'FR');
         
         // Restore the original text content
