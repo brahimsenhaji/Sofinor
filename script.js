@@ -14,18 +14,17 @@ window.onload = ()=>{
     let title1 = document.querySelector('.title1');
     let card = document.querySelectorAll('#card');
     window.onscroll = () => {
-        console.log(window.scrollY)
         if (window.scrollY >= 210) {
             title.style.opacity = 1;
         } else {
             title.style.opacity = 0;
         }
-        if (window.scrollY >= 220) {
+        if (window.scrollY >= 210) {
             About_text.style.left = "0%";
         } else {
             About_text.style.left = "100%";
         }
-        if (window.scrollY >= 215) {
+        if (window.scrollY >= 210) {
             img4.style.opacity = 1;
         } else {
             img4.style.opacity = 0;
@@ -50,7 +49,7 @@ window.onload = ()=>{
 let Language = document.querySelector('.Language');
 let txt = document.querySelectorAll('#txt');
 
-let text_in_english = ['Home', 'About', 'Services','Contact us', 'Industrial Maintenance and Supplies','About',' ',' ','Services','Industrial Maintenance and Supplies','Industrial machinery repair and commissioning','Automatism, Pneumatics, Hydraulics','Installation and realization of electrical boxes','Contact us','SEND A MESSAGE','Home','About','Services'];
+let text_in_english = ['Home', 'About', 'Services','Contact us', 'Industrial Maintenance and Supplies','About','Sofinord, your trusted ally, stands out in industrial maintenance, supply and services. With an absolute dedication to excellence, we offer complete solutions to meet the complex needs of modern industries. From maintenance to industrial supply, repair and automation, Sofinord excels. From pneumatics and hydraulics to electrical cabinets, our expertise is extensive and reliable.'," Sofinord's mission is crystal clear: we are your ultimate partner for industrial success. With quality, reliability and innovation at our core, we're ready to meet the challenges of modern industry. Count on us for maintenance, repairs, upgrades - we exceed expectations. Join Sofinord to unlock the true potential of your industrial operations.",'Services','Industrial Maintenance and Supplies','Industrial machinery repair and commissioning','Automatism, Pneumatics, Hydraulics','Installation and realization of electrical boxes','Contact us','SEND A MESSAGE','Home','About','Services'];
 
 // Store the original text content in an array
 let originalTextContent = Array.from(txt).map(t => t.textContent);
@@ -58,13 +57,13 @@ let originalTextContent = Array.from(txt).map(t => t.textContent);
 Language.addEventListener('click', () => {
     let value = Language.getAttribute('value');
     if (value == 'EN') {
-        Language.setAttribute('value', 'EN');
+        Language.setAttribute('value', 'FR');
         txt.forEach(t => {
             let vv = t.getAttribute('data-value');
             t.textContent = text_in_english[vv];
         });
     } else if (value == 'FR') {
-        Language.setAttribute('value', 'FR');
+        Language.setAttribute('value', 'EN');
         
         // Restore the original text content
         txt.forEach((t, index) => {
