@@ -82,3 +82,40 @@ fa_bars.addEventListener('click', ()=>{
 
    nav.classList.toggle('slidNav');
 })
+
+//------------------------------------------------------------------------------------------
+
+//function to send a message
+
+const btn = document.getElementById('button');
+
+
+document.getElementById('form')
+.addEventListener('submit', function (event) {
+event.preventDefault();
+
+   btn.textContent = 'SENDING...';
+
+   const serviceID = 'default_service';
+   const templateID = 'template_9ww89f6';
+
+   emailjs.sendForm(serviceID, templateID, this)
+    .then(() => {
+      btn.textContent = 'SEND MESSAGE';
+      //if u want to alert a messag
+       
+      //Delet the input filde after sending the message
+        let from_name = document.querySelector('#from_name');
+        let email_id = document.querySelector('#email_id');
+        let message = document.querySelector('#message');
+            from_name.value = '';
+            email_id.value = '';
+            message.value = '';
+
+    }, (err) => {
+      btn.textContent = 'SEND MESSAGE';
+      alert(JSON.stringify(err));
+    });
+
+
+});
