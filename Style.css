@@ -343,7 +343,7 @@ nav button:hover{
 }
 #form input{
   padding: 5px 0;
-  color: var(--SecondColor);
+  color: var(--ThirdColor);
   background-color: transparent;
   outline: none;
   border: none;
